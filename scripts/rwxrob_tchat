@@ -1,7 +1,0 @@
-#!/bin/bash
-
-#Open rwxrob tchat
-tmux new-session -d -s my_session 'tc connect rwxrob';
-tmux split-window;
-tmux resize-pane -U 13
-tmux a

@@ -1,0 +1,12 @@
+#!/bin/bash
+channel=$1
+if test -z ${channel}; then
+	read -p "Enter name channel: "; channel
+fi 
+echo "Openning tchat of ${channel}."
+
+#Open tchat
+tmux new-session -d -s ${channel} "tc connect ${channel}";
+tmux split-window;
+tmux resize-pane -U 13
+tmux a
